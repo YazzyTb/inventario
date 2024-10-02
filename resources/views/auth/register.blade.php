@@ -1,8 +1,10 @@
-<x-guest-layout>
-    <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
+<x-guest-layout>  
+    <div class="min-h-screen" style="background-image: url('/img/fondo.jpg'); background-repeat: repeat; background-size: 20%;">
+            <x-authentication-card class="flex justify-center items-center h-screen">
+                <x-slot name="logo">
+                    <img src="{{ asset('img/logo.png') }}" class="w-20 h-20" alt="Logo" />
+                </x-slot>
+
 
         <x-validation-errors class="mb-4" />
 

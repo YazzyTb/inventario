@@ -2,7 +2,7 @@
 
     
 
-    <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
+    <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-transparent bg-opacity-30 backdrop-blur-lg border-2 border-white/20 shadow-md overflow-hidden sm:rounded-lg " style="backdrop-filter: blur(8px);">
         <div class="flex justify-center items-center">
             {{ $logo }}
         </div>

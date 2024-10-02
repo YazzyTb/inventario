@@ -20,8 +20,7 @@
     <body class="font-sans antialiased">
         <x-banner />
 
-        <div class="min-h-screen bg-cover" style="background-image: url('/img/fondo.jpg');">
-
+        <div class="min-h-screen" style="background-image: url('/public/img/logo.png'); background-size: cover;">
 
             @livewire('navigation-menu')
 
