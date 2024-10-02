@@ -3,6 +3,7 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
         </h2>
+        <p>¡Cambio de prueba! - Si ves esto, los cambios están funcionando.</p> <!-- Mensaje de prueba -->
     </x-slot>
 
     <div class="py-12">
@@ -13,3 +14,4 @@
         </div>
     </div>
 </x-app-layout>
+

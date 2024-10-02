@@ -1,7 +1,9 @@
+/* Importación de Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Estilos adicionales */
 [x-cloak] {
     display: none;
 }
