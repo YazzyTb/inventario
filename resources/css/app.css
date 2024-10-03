@@ -7,3 +7,6 @@
 [x-cloak] {
     display: none;
 }
+.bg-custom-header {
+    background-color: #E7DED7;
+}

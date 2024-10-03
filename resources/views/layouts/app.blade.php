@@ -6,6 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
+        <link rel="stylesheet" href="/resources/css/app.css">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -20,13 +21,13 @@
     <body class="font-sans antialiased">
         <x-banner />
 
-        <div class="min-h-screen" style="background-image: url('/public/img/logo.png'); background-size: cover;">
+        <div class="min-h-screen" style="background-image: url('/img/fondo.jpg'); background-repeat: repeat; background-size: 20%;">
 
             @livewire('navigation-menu')
 
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="bg-white shadow">
+            <header class="shadow" style="background-color: #E7DED7;">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
