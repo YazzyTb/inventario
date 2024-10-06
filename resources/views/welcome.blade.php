@@ -12,11 +12,14 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     </head>
-    <body class="min-h-screen" style="background: linear-gradient(to right, #ffff, #C3AD9C); justify-content: center">
+    <header style="background-color: #C3AD9C">
+        <x-application-logo class="w-auto max-h-14 ml-10 mt-0" />
+    </header>
+    <body class="min-h-screen" style="background: linear-gradient(10deg,#ffff , #C3AD9C); justify-content: center">
         <div class="container mx-auto p-6">
             <!-- Encabezado -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-                <x-application-logo class="h-auto max-w-xs" />
+               
                 <div>
                     <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-black">
                         Gestiona tu inventario:
@@ -50,9 +53,10 @@
                                 @endif
                             @endauth
                         @endif
+                        
                     </div>
-                    
                 </div>
+                <img class="rounded-3xl w-auto h-auto bg-center" src="img/inventario.jpg" alt="inventario">
             </div>
         </div>
     </body>
