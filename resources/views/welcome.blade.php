@@ -21,6 +21,13 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
                
                 <div>
+                    <h1 class="mb-2 text-xl font-semibold text-gray-900 dark:text-black">
+                        "Bienvenido!"
+                    </h1>
+                    <p class="mb-2 text-xs font-semibold text-gray-900 dark:text-black">
+                        "Sistema de inventario para libros"
+                    </p>
+
                     <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-black">
                         Gestiona tu inventario:
                     </h2>
