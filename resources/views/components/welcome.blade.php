@@ -11,51 +11,69 @@
     </p>
 </div>
 
-<div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 p-6 lg:p-8">
-    
-
-
-
+<div class="bg-gray-200 bg-opacity-25 gap-6 lg:gap-8 p-6 lg:p-8">
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="flex">
-            <img src="img/iconCliente.png" alt="Descripción de la imagen" class="w-full h-auto">
-            <div class="absolute inset-x-0 bottom-0 bg-black bg-opacity-50 text-white text-center p-4">
-              Clientes
-            </div>
-          </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+        <div class="relative max-w-xs overflow-hidden bg-cover bg-[50%] bg-no-repeat">
+             <a href="">
+                 <img src="https://i0.wp.com/nuevodiario-assets.s3.us-east-2.amazonaws.com/wp-content/uploads/2024/10/01093938/Un-gran-numero-de-editoras-y-librerias-nacionales-y-extranjeras-estaran-en-la-Feria-del-Libro-2024-scaled.jpg?resize=1200%2C1200&quality=100&ssl=1" class="h-auto max-w-full rounded-lg"/>
+                <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed rounded-lg"style="background-color: hsla(0, 0%, 0%, 0.4)">
+                    <div class="flex h-full items-center justify-center">
+                        <h1 class="text-white opacity-100 "> <strong>CLIENTES</strong></h1>
+                    </div>
+                </div>
+            </a>
         </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt="">
-        </div>
-        <div>
-            <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
-        </div>
+        <div class="relative max-w-xs overflow-hidden bg-cover bg-[50%] bg-no-repeat">
+            <a href="">
+                <img src="https://image.ondacero.es/clipping/cmsimages02/2020/08/04/352B5B0D-1B16-47F7-96CB-B14CFC3DED27/104.jpg?crop=1280,1280,x249,y0&width=1200&height=1200&optimize=low&format=webply" class="h-auto max-w-full rounded-lg"/>
+               <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed rounded-lg"style="background-color: hsla(0, 0%, 0%, 0.4)">
+                   <div class="flex h-full items-center justify-center">
+                       <h1 class="text-white opacity-100 "> <strong>VENTAS</strong></h1>
+                   </div>
+               </div>
+           </a>
+       </div>
+       <div class="relative max-w-xs overflow-hidden bg-cover bg-[50%] bg-no-repeat">
+        <a href="">
+            <img src="https://image.ondacero.es/clipping/cmsimages02/2019/11/07/996672A0-F0F6-4E33-8A6C-4CB4A383700D/104.jpg?crop=1280,1280,x337,y0&width=1200&height=1200&optimize=low&format=webply" class="h-auto max-w-full rounded-lg"/>
+           <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed rounded-lg"style="background-color: hsla(0, 0%, 0%, 0.4)">
+               <div class="flex h-full items-center justify-center">
+                   <h1 class="text-white opacity-100 "> <strong>INVENTARIO</strong></h1>
+               </div>
+           </div>
+       </a>
+   </div>
+   <div class="relative max-w-xs overflow-hidden bg-cover bg-[50%] bg-no-repeat">
+    <a href="">
+        <img src="https://fotografias.lasexta.com/clipping/cmsimages02/2024/08/30/430CCECF-CCEA-4341-8FBF-3F3BA828F72F/esta-mejor-forma-seguir-estado-tus-paquetes-esta-telegram-100-fiable_104.jpg?crop=647,647,x223,y0&width=1200&height=1200&optimize=low&format=webply" class="h-auto max-w-full rounded-lg"/>
+       <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed rounded-lg"style="background-color: hsla(0, 0%, 0%, 0.4)">
+           <div class="flex h-full items-center justify-center">
+               <h1 class="text-white opacity-100 "> <strong>PROVEEDORES</strong></h1>
+           </div>
+       </div>
+   </a>
+</div>
+<div class="relative max-w-xs overflow-hidden bg-cover bg-[50%] bg-no-repeat">
+    <a href="">
+        <img src="https://previews.123rf.com/images/mankukuku/mankukuku1710/mankukuku171000001/87589456-caja-de-cartón-llena-de-libros-cerca-de-la-pared-blanca.jpg" class="h-auto max-w-full rounded-lg"/>
+       <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed rounded-lg"style="background-color: hsla(0, 0%, 0%, 0.4)">
+           <div class="flex h-full items-center justify-center">
+               <h1 class="text-white opacity-100 "> <strong>COMPRAS</strong></h1>
+           </div>
+       </div>
+   </a>
+</div>
+<div class="relative max-w-xs overflow-hidden bg-cover bg-[50%] bg-no-repeat">
+    <a href="">
+        <img src="https://png.pngtree.com/png-clipart/20230813/original/pngtree-offer-symbol-sign-percentage-vector-picture-image_10529375.png" class="h-auto max-w-full rounded-lg"/>
+       <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed rounded-lg"style="background-color: hsla(0, 0%, 0%, 0.4)">
+           <div class="flex h-full items-center justify-center">
+               <h1 class="text-white opacity-100 "> <strong>PROMOCIONES</strong></h1>
+           </div>
+       </div>
+   </a>
+</div>
+        
     </div>
     
 </div>
