@@ -24,6 +24,7 @@ Route::get('/clientes', [ClienteController::class, 'index'])->name('clientes');
 
 Route::get('/empleados', [EmpleadoController::class, 'index'])->name('empleados');
 
+
 // Ruta para mostrar la tabla de clientes
 // Route::get('/clientes', [ClienteController::class, 'index']);
 
