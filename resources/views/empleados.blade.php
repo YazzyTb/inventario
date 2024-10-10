@@ -27,11 +27,12 @@
 
                 <!-- Botón para agregar empleado -->
                 
-                <a href="{{ url('/empleado/create') }}" >
+                <a href="{{ route('empleado.create') }}">
                     <button class="mb-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
                         Crear Empleado
-                    </button> <!-- en este caso seria crear usuario en la base de datos-->
+                    </button>
                 </a>
+                
 
                 <!-- Tabla de empleado -->
                 <table border="1">

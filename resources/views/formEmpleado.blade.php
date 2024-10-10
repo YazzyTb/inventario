@@ -27,57 +27,53 @@
             <div class="flex-grow max-w-lg p-6 bg-white shadow-lg rounded-lg" style="margin-top: 64px; margin-left: 250px;">
                 <h1 class="text-2xl font-semibold text-center mb-6">Registrar Nuevo Cliente</h1>
 
-                <form action="{{ url('/clientes') }}" method="POST" class="space-y-4">
+                <form action="{{ url('/empleados') }}" method="POST" class="space-y-4">
                     @csrf  <!-- Token de seguridad para formularios -->
 
-                    <!-- Nombre -->
-                    <div class="flex flex-col">
-                        <label for="nombre" class="text-lg font-medium mb-1">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required
-                               class="border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-300">
+                    <div>
+                        <x-label for="name" value="{{ __('Nombre') }}" />
+                        <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                    </div>
+        
+                    <div class="mt-4">
+                        <x-label for="email" value="{{ __('Email') }}" />
+                        <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
+                    </div>
+        
+                    <div class="mt-4">
+                        <x-label for="password" value="{{ __('Conttraseña') }}" />
+                        <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
+                    </div>
+        
+                    <div class="mt-4">
+                        <x-label for="password_confirmation" value="{{ __('Confirmar Contraseña') }}" />
+                        <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
                     </div>
 
-                    <!-- Email -->
-                    <div class="flex flex-col">
-                        <label for="email" class="text-lg font-medium mb-1">Email:</label>
-                        <input type="email" id="email" name="email" required
-                               class="border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-300">
+                    <!-- Dropdown de rol -->
+                    <div class="mt-4">
+                        <x-label for="rol" value="{{ __('Rol') }}" />
+                        <select id="rol" name="rol" class="block mt-1 w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+                            <option value="Administrador">Administrador</option>
+                            <option value="Vendedor">Vendedor</option>
+                        </select>
                     </div>
 
-                    <!-- puntos -->
-                    <div class="flex flex-col">
-                        <label for="password" class="text-lg font-medium mb-1" type="password">Contraseña:</label>
-                        <input type="text" id="puntos" name="puntos" required
-                               class="border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring focus:ring-blue-300">
-                    </div>
-
-                    <!-- Mostrar alertas -->
-                     @if (session('success'))
-                        <div class="bg-green-500 text-white p-4 rounded-lg mb-4">
-                        {{ session('success') }}
-                         </div>
-                    @endif
-
-                    @if ($errors->any())
-                        <div class="bg-red-500 text-white p-4 rounded-lg mb-4">
-                            <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                            </ul>
+                    @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
+                        <div class="mt-4">
+                            <x-label for="terms">
+                                <div class="flex items-center">
+                                    <x-checkbox name="terms" id="terms" required />
+                                </div>
+                            </x-label>
                         </div>
                     @endif
-
-<!-- Botón de envío -->
-                    <div class="flex justify-center mt-6 ">
-                        <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300  mr-2">
-                            Guardar cliente
-                        </button>
-                        <a href="{{ url('/clientes') }}" >
-                            <button class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300 ml-2">
-                                Volver
-                            </button>
-                        </a>
+        
+                    <div class="flex items-center justify-end mt-4">
+        
+                        <x-button class="ms-4">
+                            {{ __('Registrar') }}
+                        </x-button>
                     </div>
 
                 </form>

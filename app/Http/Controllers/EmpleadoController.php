@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User; // Asegúrate de importar el modelo correcto
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+
 
 class EmpleadoController extends Controller
 {
@@ -17,7 +19,27 @@ class EmpleadoController extends Controller
      {
          return view('formEmpleado');
      }
- 
 
-    // Otras funciones como create, store, etc.
+
+     public function store(Request $request)
+     {
+         // Validar los datos
+         $validatedData = $request->validate([
+             'name' => 'required|string|max:255',
+             'email' => 'required|string|email|max:255|unique:users',
+             'password' => 'required|string|min:8|confirmed',
+             'rol' => 'required|string',  // Asegúrate de validar el rol también
+         ]);
+     
+         // Crear un nuevo usuario
+         User::create([
+             'name' => $validatedData['name'],
+             'email' => $validatedData['email'],
+             'password' => Hash::make($validatedData['password']),
+             'rol' => $validatedData['rol'], // Guardar el rol seleccionado
+         ]);
+     
+         return redirect()->route('clientes.index')->with('success', 'Cliente registrado exitosamente');
+     }
+     
 }
