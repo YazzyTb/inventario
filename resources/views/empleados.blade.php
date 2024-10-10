@@ -41,6 +41,7 @@
                             <th class="py-2 px-4 border-b">Nombre</th>
                             <th class="py-2 px-4 border-b">Email</th>
                             <th class="py-2 px-4 border-b">Rol</th>
+                            <th class="py-2 px-4 border-b">Privilegios</th>
                             <th class="py-2 px-4 border-b">Acciones</th>
                         </tr>
                     </thead>
@@ -50,6 +51,7 @@
                                 <td class="py-2 px-4 border-b">{{ $user->nombre }}</td>
                                 <td class="py-2 px-4 border-b">{{ $user->email }}</td>
                                 <td class="py-2 px-4 border-b">{{ $user->rol }}</td>
+                                <td class="py-2 px-4 border-b">{{ $user->privilegios }}</td>
                                 <td class="py-2 px-4 border-b">
                                     <button class="bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600">Editar</button>
                                     <button class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600">Borrar</button>

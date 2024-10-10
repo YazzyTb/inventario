@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="mt-4">
-                    <x-label for="password" value="{{ __('Password') }}" />
+                    <x-label for="password" value="{{ __('Contraseña') }}" />
                     <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
                 </div>
 
@@ -56,7 +56,7 @@
                     @endif
 
                     <x-button class="ms-4">
-                        {{ __('Login') }}
+                        {{ __('Iniciar Sesión') }}
                     </x-button>
                 </div>
             </form>

@@ -59,6 +59,43 @@
                         </select>
                     </div>
 
+                    <!-- Privilegios -->
+                    <div class="mt-4">
+                        <x-label for="privilegios" value="{{ __('Privilegios') }}" />
+                        <div class="flex">
+                            <x-input id="privilegios" class="block mt-1 w-full" type="text" name="privilegios" readonly />
+                            <button type="button" id="openModal" class="ml-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                                Seleccionar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Modal de Privilegios -->
+                    <div id="privilegiosModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
+                        <div class="flex items-center justify-center min-h-screen">
+                            <div class="bg-white p-6 rounded-lg shadow-lg w-1/3">
+                                <h2 class="text-xl font-semibold mb-4">Seleccionar Privilegios</h2>
+                                <div class="space-y-2">
+                                    <div><input type="checkbox" class="privilegio" value="Gestionar usuarios"> Administrar empleados </div>
+                                    <div><input type="checkbox" class="privilegio" value="Gestionar productos"> Realizar descuentos </div>
+                                    <div><input type="checkbox" class="privilegio" value="Gestionar ventas"> Comunicación con proveedores</div>
+                                    <div><input type="checkbox" class="privilegio" value="Gestionar compras"> Gestionar clientes</div>
+                                    <div><input type="checkbox" class="privilegio" value="Gestionar clientes"> Realizar compras</div>
+                                    <div><input type="checkbox" class="privilegio" value="Ver reportes"> Realizar ventas</div>
+                                    <div><input type="checkbox" class="privilegio" value="Generar facturas"> Administrar inventario</div>
+                                    <div><input type="checkbox" class="privilegio" value="Gestionar inventario"> Visualizar inventario</div>
+                                    <div><input type="checkbox" class="privilegio" value="Control de caja"> Reporte de ganancia diaria</div>
+                                    <div><input type="checkbox" class="privilegio" value="Administrar roles"> Gestionar bitacora</div>
+                                    <div><input type="checkbox" class="privilegio" value="Administrar promociones"> Administrar promociones</div>
+                                </div>
+                                <div class="flex justify-end mt-4">
+                                    <button id="closeModal" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 mr-2">Cancelar</button>
+                                    <button id="savePrivileges" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Guardar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+
                     @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                         <div class="mt-4">
                             <x-label for="terms">
@@ -83,3 +120,29 @@
         @livewireScripts
     </body>
 </html>
+
+<script>
+    // Abrir el modal
+    document.getElementById('openModal').addEventListener('click', function () {
+        document.getElementById('privilegiosModal').classList.remove('hidden');
+    });
+
+    // Cerrar el modal
+    document.getElementById('closeModal').addEventListener('click', function () {
+        document.getElementById('privilegiosModal').classList.add('hidden');
+    });
+
+    // Guardar privilegios seleccionados
+    document.getElementById('savePrivileges').addEventListener('click', function () {
+        const checkboxes = document.querySelectorAll('.privilegio:checked');
+        let selectedPrivileges = [];
+
+        checkboxes.forEach((checkbox) => {
+            selectedPrivileges.push(checkbox.value);
+        });
+
+        document.getElementById('privilegios').value = selectedPrivileges.join(', ');
+        document.getElementById('privilegiosModal').classList.add('hidden');
+    });
+</script>
+
