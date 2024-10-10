@@ -75,6 +75,7 @@
    </a>
 </div>
 <div class="relative max-w-xs overflow-hidden bg-cover bg-[50%] bg-no-repeat">
+    
     <a href="{{ route('empleados') }}">
         <img src="https://png.pngtree.com/png-clipart/20230913/original/pngtree-librarian-clipart-woman-reading-books-on-book-shelves-in-library-illustration-png-image_11061555.png" class="h-auto max-w-full rounded-lg"/>
        <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed rounded-lg"style="background-color: hsla(0, 0%, 0%, 0.4)">

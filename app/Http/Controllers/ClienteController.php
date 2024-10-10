@@ -26,7 +26,7 @@ class ClienteController extends Controller
         $request->validate([
             'nombre' => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'puntos' => 'required|string|max:15',
+            'puntos' => 'required|int|max:100',
         ]);
 
         // Crear un nuevo cliente

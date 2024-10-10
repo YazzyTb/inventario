@@ -12,24 +12,56 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @livewireStyles
-        
     </head>
     <body class="font-sans antialiased">
         
         <x-banner />
         
         @livewire('navigation-menu')
-        
 
+        <div class="flex">
             @include('sidebar')
-            <div class="flex-grow p-4 ml-[250px] sm:ml-0 sm:pl-4" style="margin-top: 64px;"> <!-- Añadir margen superior para el navbar -->
-                <h1>hola</h1>
+
+            <div class="flex-grow p-4" style="margin-top: 64px; margin-left: 250px;">
+                <h1 class="text-2xl font-bold mb-4">Empleados</h1>
+
+                <!-- Botón para agregar empleado -->
+                
+                <a href="{{ url('/empleado/create') }}" >
+                    <button class="mb-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                        Crear Empleado
+                    </button> <!-- en este caso seria crear usuario en la base de datos-->
+                </a>
+
+                <!-- Tabla de empleado -->
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th class="py-2 px-4 border-b">Nombre</th>
+                            <th class="py-2 px-4 border-b">Email</th>
+                            <th class="py-2 px-4 border-b">Rol</th>
+                            <th class="py-2 px-4 border-b">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($user as $user)
+                            <tr>
+                                <td class="py-2 px-4 border-b">{{ $user->nombre }}</td>
+                                <td class="py-2 px-4 border-b">{{ $user->email }}</td>
+                                <td class="py-2 px-4 border-b">{{ $user->rol }}</td>
+                                <td class="py-2 px-4 border-b">
+                                    <button class="bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600">Editar</button>
+                                    <button class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600">Borrar</button>
+                                </td>
+                            </tr>
+                        @endforeach
+                        
+                    </tbody>
+                </table>
+            
+            </div>
+        </div>
+
         @livewireScripts
-        
-        </div>
-        </div>
-
-        
-
     </body>
 </html>
