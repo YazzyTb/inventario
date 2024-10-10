@@ -40,6 +40,7 @@
                             <th class="py-2 px-4 border-b">Nombre</th>
                             <th class="py-2 px-4 border-b">Email</th>
                             <th class="py-2 px-4 border-b">Puntos</th>
+                            <th class="py-2 px-4 border-b">Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -48,8 +49,10 @@
                                 <td class="py-2 px-4 border-b">{{ $cliente->nombre }}</td>
                                 <td class="py-2 px-4 border-b">{{ $cliente->email }}</td>
                                 <td class="py-2 px-4 border-b">{{ $cliente->puntos }}</td>
-                                <button class="bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600">Editar</button>
-                                <button class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600">Borrar</button>
+                                <td class="py-2 px-4 border-b">
+                                    <button class="bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600">Editar</button>
+                                    <button class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600">Borrar</button>
+                                </td>
                             </tr>
                         @endforeach
                         
