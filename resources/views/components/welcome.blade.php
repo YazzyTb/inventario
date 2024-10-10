@@ -1,4 +1,5 @@
 
+
 <div class="p-6 lg:p-8 border-b border-gray-200" style="background-color: #E7DED7;">
     <x-application-logo class="block h-12 w-auto" />
 
@@ -14,7 +15,7 @@
 <div class="bg-gray-200 bg-opacity-25 gap-6 lg:gap-8 p-6 lg:p-8">
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
         <div class="relative max-w-xs overflow-hidden bg-cover bg-[50%] bg-no-repeat">
-             <a href="">
+             <a href="{{ route('clientes') }}">
                  <img src="https://i0.wp.com/nuevodiario-assets.s3.us-east-2.amazonaws.com/wp-content/uploads/2024/10/01093938/Un-gran-numero-de-editoras-y-librerias-nacionales-y-extranjeras-estaran-en-la-Feria-del-Libro-2024-scaled.jpg?resize=1200%2C1200&quality=100&ssl=1" class="h-auto max-w-full rounded-lg"/>
                 <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed rounded-lg"style="background-color: hsla(0, 0%, 0%, 0.4)">
                     <div class="flex h-full items-center justify-center">
@@ -69,6 +70,16 @@
        <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed rounded-lg"style="background-color: hsla(0, 0%, 0%, 0.4)">
            <div class="flex h-full items-center justify-center">
                <h1 class="text-white opacity-100 "> <strong>PROMOCIONES</strong></h1>
+           </div>
+       </div>
+   </a>
+</div>
+<div class="relative max-w-xs overflow-hidden bg-cover bg-[50%] bg-no-repeat">
+    <a href="{{ route('empleados') }}">
+        <img src="https://png.pngtree.com/png-clipart/20230913/original/pngtree-librarian-clipart-woman-reading-books-on-book-shelves-in-library-illustration-png-image_11061555.png" class="h-auto max-w-full rounded-lg"/>
+       <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed rounded-lg"style="background-color: hsla(0, 0%, 0%, 0.4)">
+           <div class="flex h-full items-center justify-center">
+               <h1 class="text-white opacity-100 "> <strong>EMPLEADOS</strong></h1>
            </div>
        </div>
    </a>

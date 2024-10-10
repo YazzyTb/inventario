@@ -41,3 +41,19 @@ $maxWidth = [
         {{ $slot }}
     </div>
 </div>
+
+
+
+
+
+<!-- resources/views/components/modal.blade.php -->
+@props(['show' => false])
+
+<div x-data="{ open: @entangle($attributes->get('show')) }" x-show="open" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" style="display: none;">
+    <div class="bg-white rounded-lg p-6 w-11/12 md:w-1/2">
+        <button @click="open = false" class="text-red-500">Cerrar</button>
+        <div>
+            {{ $slot }}
+        </div>
+    </div>
+</div>
